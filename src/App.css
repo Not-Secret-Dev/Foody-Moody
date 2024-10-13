@@ -1,0 +1,13 @@
+.products-text {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bolder;
+  margin: 10px 0;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0 20px;
+}
