@@ -1,9 +1,16 @@
-nav {
+.upper-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid;
   height: 80px;
+}
+
+.lower-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
 }
 
 .logo {
@@ -21,14 +28,14 @@ nav {
   color: #c30000;
 }
 
-ul {
+.upper-ul {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 24px;
 }
 
-li {
+.upper-ul li {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,14 +46,47 @@ li {
   transition: transform 0.4s;
 }
 
-li:nth-child(2) {
+.lower-ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 24px;
+}
+
+.lower-ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  font-size: 22px;
+  font-weight: bold;
+  transition: all 0.4s;
+  height: 40px;
+  width: fit-content;
+  border-bottom: 2px solid transparent;
+  margin-left: 32px;
+}
+
+.upper-ul li:nth-child(2) {
   transform: scale(1.3);
 }
 
-li:first-child:hover,
-li:nth-child(2):hover {
+.upper-ul li:first-child:hover {
   cursor: pointer;
   transform: scale(1.1);
+}
+.upper-ul li:nth-child(2):hover {
+  cursor: pointer;
+  transform: scale(1.45);
+}
+
+.lower-ul li:first-child:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+.lower-ul li:nth-child(2):hover {
+  cursor: pointer;
+  opacity: 0.7;
 }
 
 .search {
@@ -90,7 +130,7 @@ li:nth-child(2):hover {
 @media (max-width: 875px) {
   nav {
     flex-direction: column;
-    height: auto; 
+    height: auto;
   }
 
   ul {
@@ -98,8 +138,8 @@ li:nth-child(2):hover {
   }
 
   li {
-    margin: 16px; 
-    font-size: 20px; 
+    margin: 16px;
+    font-size: 20px;
   }
 
   li:nth-child(2) {
@@ -135,12 +175,12 @@ li:nth-child(2):hover {
   }
 
   li:first-child {
-    right:50px;
+    right: 50px;
     font-size: 26px;
   }
 
   li:last-child {
-    left:100px;
+    left: 100px;
     top: -120px;
     scale: 1.35;
   }
@@ -156,5 +196,16 @@ li:nth-child(2):hover {
 
   .search input {
     width: 300px;
+  }
+}
+
+/* Keyframs animations */
+@keyframes underline-anim {
+  from {
+    width: fit-content;
+  }
+
+  to {
+    width: 140px;
   }
 }
